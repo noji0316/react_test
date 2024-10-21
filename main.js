@@ -1,25 +1,35 @@
-// console.log(a);
-// try {
-// console.log(b);
-// console.log(c);
-// } catch {};
+// IIFE (즉시 실행 함수)
 
-// var a = 1;
-// const b = 2;
-// let c;
+(function fst() {
+    console.log('fst commit')
+}) ();
 
-// function foo(arg) {
-//     return arg;
-//   }
-  
-//   function bar() {
-//     console.log('bar');
-//   }
-  
-//   foo(bar)();
-  
-const foo = function (arg) {
-    return arg;
-  }
-  
-  foo(1);
+// 재귀함수
+
+function scd (ccm) {
+    if (ccm === 5) return;
+
+    console.log(ccm)
+    scd(ccm + 2);
+}
+
+scd(1);
+
+// 중첩함수
+
+function thd(spoon) {
+    function act() {
+        console.log(spoon);
+    }
+    act();
+}
+
+thd(7);
+
+// 콜백함수
+function like(aaa) {
+    aaa();
+}
+like(() => {
+    console.log(3);
+});
